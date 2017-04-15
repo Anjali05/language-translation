@@ -10,12 +10,12 @@ before_script:
   - bower install
   - gem install rails -v 4.2.1
 
-#install: 
+#install:
 
 jdk:
   - oraclejdk8
 
-ßenv:
+env:
   - TEST_DIR=automatedTests
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
