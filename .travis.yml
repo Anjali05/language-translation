@@ -8,9 +8,22 @@ before_script:
   - cp config/database.yml.travis config/database.yml
   - npm install -g bower
   - bower install
+  - gem install rails -v 4.2.1
 
+#install: 
+
+jdk:
+  - oraclejdk8
+
+ßenv:
+  - TEST_DIR=automatedTests
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
+
+script:
+  - rails s
+  - ls
+  - cd $TEST_DIR && mvn clean && mvn install && mvn test
 
 notifications:
   webhooks:
